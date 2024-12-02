@@ -1,0 +1,15 @@
+[GLOBAL]
+pants_version = "2.23.0"
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.docker",
+    "pants.backend.shell",
+    "pants.backend.experimental.python.lint.ruff.check"
+]
+
+[python]
+interpreter_constraints = [">=3.7"]
+
+
+[source]
+root_patterns = ["/src"]
