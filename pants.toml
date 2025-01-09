@@ -1,10 +1,10 @@
 [GLOBAL]
-pants_version = "2.23.0"
+pantsd = false
+pants_version = "2.24.0.rc0"
 backend_packages = [
     "pants.backend.python",
-    "pants.backend.docker",
+    "pants.backend.experimental.adhoc",
     "pants.backend.shell",
-    "pants.backend.experimental.python.lint.ruff.check"
 ]
 
 [python]
@@ -13,3 +13,6 @@ interpreter_constraints = [">=3.7"]
 
 [source]
 root_patterns = ["/src"]
+
+[environments-preview.names]
+workspace = "//:workspace"
